@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "86275928040",
+    "firebase_url": "https://penamahasiswa-b44cc.firebaseio.com",
+    "project_id": "penamahasiswa-b44cc",
+    "storage_bucket": "penamahasiswa-b44cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86275928040:android:408cf52e82390eeb4ebe5d",
+        "android_client_info": {
+          "package_name": "com.example.penamahasiswa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86275928040-to5rlss91eaurm6lag5ln9e6glppe2l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb1gsmpEsNoCyXowcUV3SW-Nk38QFa6s0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86275928040-to5rlss91eaurm6lag5ln9e6glppe2l0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
