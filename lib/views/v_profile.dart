@@ -16,11 +16,28 @@ class ViewProfile extends StatefulWidget {
   _ViewProfileState createState() => _ViewProfileState();
 }
 
-class _ViewProfileState extends State<ViewProfile> {  
+class _ViewProfileState extends State<ViewProfile> {
+
+  var name;
+
   logout() async{
       SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
       sharedPreferences.clear();
+      sharedPreferences.remove("username");
       sharedPreferences.commit();
+  }
+
+  getSession()async{
+    SharedPreferences pref=await SharedPreferences.getInstance();
+    setState(() {
+      name=pref.get("username");
+    });
+  }
+
+  @override
+  void initState() {
+    getSession();
+    super.initState();
   }
 
   @override  
@@ -62,7 +79,7 @@ class _ViewProfileState extends State<ViewProfile> {
               child: ListView(
                 shrinkWrap: true,
                 children: <Widget>[
-                  Center(child: Text("NURLAELA KHASANNAH",style: TextStyle(letterSpacing: 2,fontSize: ScreenConfig.blockHorizontal*4,fontWeight: FontWeight.bold),)),
+                  Center(child: Text("$name",style: TextStyle(letterSpacing: 2,fontSize: ScreenConfig.blockHorizontal*4,fontWeight: FontWeight.bold),)),
                   SizedBox(height: 6,),
                   Center(child: Text("Mahasiswi",style: TextStyle(letterSpacing: 2,fontSize: ScreenConfig.blockHorizontal*2.5),)),
                   SizedBox(height: 20,),
